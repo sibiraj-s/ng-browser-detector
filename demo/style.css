@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+.btn:active, .btn:active:focus, .btn:focus {
+  outline: 0;
+}
+
+mark {
+  background: #f1f1f1;
+  border-radius: 4px;
+  padding: 3px 5px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 1200px;
+  overflow: hidden;
+  overflow-x: scroll;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+body .navbar {
+  min-height: 40px;
+}
+body .navbar-nav > li > a {
+  padding: 10px 15px;
+}
+body p {
+  font-size: 13px;
+}
+body .hljs {
+  border-radius: 5px;
+}
+body .contain {
+  display: flex;
+  padding: 10px 0;
+}
+body .contain .col40 {
+  padding: 15px;
+  flex-basis: 40%;
+}
+body .contain .col40 table {
+  margin-top: 100px;
+  width: 320px;
+}
+body .contain .col40 table td {
+  border: none;
+}
+body .contain .col60 {
+  padding: 15px;
+  flex-basis: 60%;
+  border-left: 1px solid #ddd;
+  height: 100vh;
+  overflow: auto;
+  overflow-x: hidden;
+}
+body .contain .col60 .filler {
+  height: 40px;
+}
+body .contain .col60 pre {
+  background-color: transparent;
+  border: 0;
+  padding-left: 0;
+}

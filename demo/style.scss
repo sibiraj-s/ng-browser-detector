@@ -1,0 +1,80 @@
+@import url( 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+.btn {
+  &:active,
+  &:active:focus,
+  &:focus {
+    outline: 0;
+  }
+}
+
+mark {
+  background   : #f1f1f1;
+  border-radius: 4px;
+  padding      : 3px 5px;
+}
+
+body {
+  margin     : 0;
+  padding    : 0;
+  width      : 100%;
+  min-width  : 1200px;
+  overflow   : hidden;
+  overflow-x : scroll;
+  font-family: 'Open Sans', sans-serif;
+  font-size  : 14px;
+
+  .navbar {
+    min-height: 40px;
+  }
+
+  .navbar-nav > li > a {
+    padding: 10px 15px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  .hljs {
+    border-radius: 5px;
+  }
+
+  .contain {
+    display: flex;
+    padding: 10px 0;
+
+    .col40 {
+      padding   : 15px;
+      flex-basis: 40%;
+
+      table {
+        margin-top: 100px;
+        width     : 320px;
+
+        td {
+          border: none;
+        }
+      }
+    }
+
+    .col60 {
+      padding    : 15px;
+      flex-basis : 60%;
+      border-left: 1px solid #ddd;
+      height     : 100vh;
+      overflow   : auto;
+      overflow-x : hidden;
+
+      .filler {
+        height: 40px;
+      }
+
+      pre {
+        background-color: transparent;
+        border          : 0;
+        padding-left    : 0;
+      }
+    }
+  }
+}
