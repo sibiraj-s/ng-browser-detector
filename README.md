@@ -92,13 +92,13 @@ the directive appends the browser details to element's class, if provided `brows
 
 ## Pull Requests
 
-Send Pull Requests only to `.js` files in `src` directory only. files in dist folder is auto generated
+Send Pull Requests only to `.js` files in `src/` directory only. files in `dist/` folder is auto generated
 
 * **grunt serve** - sets up a local server with livereload
 
-* **grunt develop** - watches js files for changes and lints the same
+* **grunt develop** - watches `.js` files for changes and lints the same
 
-* **grunt dist** - adds lints js files for errors, add banners and minifies the js files
+* **grunt dist** - lints(using jshint), add banners and minifies the `.js` files
 
 
 
