@@ -22,7 +22,7 @@ module.exports = grunt => {
                     sourcemap: 'none'
                 },
                 files: {
-                    'demo/style.css': 'demo/style.scss',
+                    'docs/style.css': 'docs/style.scss',
                 }
             }
         },
@@ -68,7 +68,7 @@ module.exports = grunt => {
                 tasks: ['jshint']
             },
             sass: {
-                files: ['demo/**/*.scss'],
+                files: ['docs/**/*.scss'],
                 tasks: ['sass']
             },
             options: {
