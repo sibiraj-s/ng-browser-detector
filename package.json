@@ -6,7 +6,7 @@
     "cz": "git-cz",
     "precommit": "yarn run travis-test",
     "test": "karma start",
-    "travis-test": "./node_modules/.bin/karma start --browsers Firefox --single-run"
+    "test:single-run": "./node_modules/.bin/karma start --browsers Firefox --single-run"
   },
   "repository": {
     "type": "git",

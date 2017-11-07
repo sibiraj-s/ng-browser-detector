@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - 7.10.0
+  - 8.9.0
 
 branches:
   only:
@@ -14,4 +14,4 @@ before_script:
   - sh -e /etc/init.d/xvfb start
 
 script:
-  - yarn run travis-test
+  - yarn run test:single-run
