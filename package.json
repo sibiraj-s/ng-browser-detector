@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "AngularJs service to detect platform, browser and version",
   "scripts": {
+    "start": "grunt serve",
+    "watch": "grunt watch",
+    "develop": "grunt develop",
+    "build": "grunt dist",
     "cz": "git-cz",
-    "precommit": "yarn run travis-test",
+    "precommit": "yarn run test:single-run",
     "test": "karma start",
     "test:single-run": "./node_modules/.bin/karma start --browsers Firefox --single-run"
   },
