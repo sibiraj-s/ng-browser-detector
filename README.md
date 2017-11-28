@@ -18,24 +18,22 @@ or use cdn
 ##### Minified
 
 ```bash
-//unpkg.com/ng-browser-detector@latest/dist/ng-browser-detector.min.js
+//unpkg.com/ng-browser-detector@latest/ng-browser-detector.min.js
 ```
 
 ##### Pretty Printed
 
 ```bash
-//unpkg.com/ng-browser-detector@latest/dist/ng-browser-detector.js
+//unpkg.com/ng-browser-detector@latest/ng-browser-detector.js
 ```
 or
 
-Install via Package managers such as [npm][npm], [yarn][yarn] and [bower][bower]
+Install via Package managers such as [npm][npm] or [yarn][yarn]
 
 ```bash
 npm install ng-browser-detector --save
 # or
 yarn add ng-browser-detector
-# or
-bower install ng-browser-detector --save
 ```
 
 ### Usage
@@ -45,7 +43,7 @@ Import the modules required for ng-browser-detector.
  ```html
 <-- scripts -->
 <script src="angular/angular.min.js"></script>
-<script src="ng-browser-detector/dist/ng-browser-detector.min.js"></script>
+<script src="../ng-browser-detector.min.js"></script>
  ```
 
 add `ngBrowser` dependency to the module
@@ -83,6 +81,7 @@ appBrowser.getVersion();
 ```
 
 a simple directive is included (usage : optional)
+
 ```html
 <body browser-detector></body>
 ```
@@ -90,21 +89,8 @@ a simple directive is included (usage : optional)
 the directive appends the browser details to element's class, if provided `browser-detector="attr"` then the details are added as attributes
 
 
-## Pull Requests
-
-Send Pull Requests only to `.js` files in `src/` directory only. files in `dist/` folder is auto generated
-
-* **grunt serve** - sets up a local server with livereload
-
-* **grunt develop** - watches `.js` files for changes and lints the same
-
-* **grunt dist** - lints(using jshint), add banners and minifies the `.js` files
-
-
-
 [npm]: https://www.npmjs.com/
 [yarn]: https://yarnpkg.com/lang/en/
-[bower]: https://bower.io/
 [github]: https://sibiraj-s.github.io/
 [ng-browser-detector]: https://github.com/Sibiraj-S/ng-browser-detector
 [demo]: https://sibiraj-s.github.io/ng-browser-detector/

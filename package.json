@@ -1,16 +1,20 @@
 {
   "name": "ng-browser-detector",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "AngularJs service to detect platform, browser and version",
   "scripts": {
-    "start": "grunt serve",
-    "watch": "grunt watch",
-    "develop": "grunt develop",
-    "build": "grunt dist",
+    "build": "grunt build",
     "cz": "git-cz",
+    "develop": "grunt develop",
+    "lint": "grunt lint",
+    "postbuild": "sh ./scripts/postbuild.sh",
+    "prebuild": "yarn run lint && sh ./scripts/prebuild.sh",
     "precommit": "yarn run test:single-run",
-    "test": "karma start",
-    "test:single-run": "./node_modules/.bin/karma start --browsers Firefox --single-run"
+    "release": "sh ./scripts/release.sh",
+    "start": "grunt serve",
+    "test": "./node_modules/.bin/karma start",
+    "test:single-run": "./node_modules/.bin/karma start --browsers Firefox --single-run",
+    "watch": "grunt watch"
   },
   "repository": {
     "type": "git",
@@ -30,10 +34,11 @@
     "url": "https://github.com/Sibiraj-S/ng-browser-detector/issues"
   },
   "homepage": "https://github.com/Sibiraj-S/ng-browser-detector#readme",
-  "dependencies": {
+  "peerDependencies": {
     "angular": ">=1.6.0"
   },
   "devDependencies": {
+    "angular": "^1.6.7",
     "angular-mocks": "^1.6.7",
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.1.0",

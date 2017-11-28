@@ -6,7 +6,8 @@
   <meta charset="utf-8">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="style.css">
   <title>AngularJs Browser Detector</title>
 </head>
@@ -16,24 +17,25 @@
     <div class="col40">
       <a class="github-button" href="https://github.com/Sibiraj-S" aria-label="Follow @Sibiraj-S on GitHub">Follow @Sibiraj-S</a>
       <a class="github-button" href="https://github.com/Sibiraj-S/ng-browser-detector/fork" data-icon="octicon-repo-forked" aria-label="Fork Sibiraj-S/ng-browser-detector on GitHub">Fork</a>
-      <a class="github-button" href="https://github.com/Sibiraj-S/ng-browser-detector/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download Sibiraj-S/ng-browser-detector on GitHub">Download ng-browser-detector</a>
+      <a class="github-button" href="https://github.com/Sibiraj-S/ng-browser-detector/archive/master.zip" data-icon="octicon-cloud-download"
+        aria-label="Download Sibiraj-S/ng-browser-detector on GitHub">Download ng-browser-detector</a>
       <br>
       <br>
       <h3>ng-browser-detector demo</h3>
       <br>
       <br>
-      <p> You are viewing this page in <mark>{{appBrowser.getPlatform()}} - {{appBrowser.getName()}}(v-{{appBrowser.getVersion()}}) </mark></p>
+      <p> You are viewing this page in
+        <mark>{{appBrowser.getPlatform()}} - {{appBrowser.getName()}}(v-{{appBrowser.getVersion()}}) </mark>
+      </p>
     </div>
     <div class="col60">
       <h2>ng-browser-detector</h2>
       <h3>Installation</h3>
-      <p>Installation can be done via package managers such as npm, yarn and bower</p>
+      <p>Installation can be done via package managers such as npm or yarn</p>
       <pre><code class="bash">
   npm install ng-browser-detector --save
   # or
   yarn add ng-browser-detector
-  # or
-  bower install ng-browser-detector --save
   </code></pre>
       <h3>Usage</h3>
       <p> import the modules required for ng-browser-detector.</p>
@@ -41,7 +43,8 @@
   &lt;script src="angular/angular.min.js"&gt;&lt;/script&gt;
   &lt;script src="ng-browser-detector/dist/ng-browser-detector.min.js"&gt;&lt;/script&gt;
       </code></pre>
-      <p>add the <a href="https://github.com/Sibiraj-S/ng-browser-detector" target="_blank">ngBrowser</a> dependency to the module</p>
+      <p>add the
+        <a href="https://github.com/Sibiraj-S/ng-browser-detector" target="_blank">ngBrowser</a> dependency to the module</p>
       <pre><code class="javascript">
   angular.module('myApp', ['ngBrowser'])
       </code></pre>
@@ -55,7 +58,8 @@
       <pre><code class="html">
   &lt;body browser-detector&gt;&lt;/body&gt;
       </code></pre>
-      <p>the directive appends the browser details to element's class, if provided <mark>browser-detector="attr"</mark> then the detauls are added as attributes</p>
+      <p>the directive appends the browser details to element's class, if provided
+        <mark>browser-detector="attr"</mark> then the detauls are added as attributes</p>
     </div>
   </div>
   <!-- dependencies -->

@@ -80,5 +80,6 @@ module.exports = grunt => {
     // grunt tasks
     grunt.registerTask('develop', ["watch"]);
     grunt.registerTask("serve", ["connect"]);
-    grunt.registerTask("dist", ["jshint", "concat", "uglify"]);
+    grunt.registerTask('lint', ['jshint']);
+    grunt.registerTask("build", ["jshint", "concat", "uglify"]);
 };
