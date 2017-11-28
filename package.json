@@ -9,7 +9,7 @@
     "lint": "grunt lint",
     "postbuild": "sh ./scripts/postbuild.sh",
     "prebuild": "sh ./scripts/prebuild.sh",
-    "precommit": "yarn run test:single-run",
+    "precommit": "yarn run lint && yarn run test:single-run",
     "prerelease": "yarn run build",
     "release": "sh ./scripts/release.sh",
     "start": "grunt serve",
