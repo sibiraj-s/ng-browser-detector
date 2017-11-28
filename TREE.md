@@ -1,26 +1,24 @@
 ```
 .
-├── demo
-│   ├── app.js
-│   ├── favicon.ico
-│   ├── index.html
-│   ├── style.css
-│   └── style.scss
-├── dist
-│   ├── ng-browser-detector.js
-│   ├── ng-browser-detector.min.js
-│   └── ng-browser-detector.min.js.map
+├── scripts
+│   ├── postbuild.sh
+│   ├── prebuild.sh
+│   └── release.sh
 ├── src
 │   └── ng-browser-detector.js
 ├── test
 │   └── ng-browser-detector.spec.js
+├── .vscode
+│   └── settings.json
 ├── .gitignore
-├── .travis.yml
 ├── Gruntfile.js
-├── LICENSE
-├── README.md
-├── TREE.md
 ├── karma.conf.js
+├── LICENSE
 ├── package.json
+├── package-lock.json
+├── .pullapprove.yml
+├── README.md
+├── .travis.yml
+├── TREE.md
 └── yarn.lock
 ```
