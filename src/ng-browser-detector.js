@@ -1,9 +1,9 @@
-(function() {
+(function () {
 
-    var $browser = function($window) {
+    var $browser = function ($window) {
 
         var matched, browser;
-        var uaMatch = function(ua) {
+        var uaMatch = function (ua) {
             ua = ua.toLowerCase();
             var match = /(edge)\/([\w.]+)/.exec(ua) ||
                 /(opr)[\/]([\w.]+)/.exec(ua) ||
@@ -47,10 +47,15 @@
             matched.browser = opera;
             browser[opera] = true;
         }
-        if (browser.rv || browser.edge) {
+        if (browser.rv) {
             var ie = "msie";
             matched.browser = ie;
             browser[ie] = true;
+        }
+        if (browser.edge) {
+            var edge = "edge";
+            matched.browser = edge;
+            browser[edge] = true;
         }
         if (browser.safari && browser.android) {
             var android = "android";
@@ -61,42 +66,42 @@
         browser.platform = matched.platform;
 
         return {
-            get: function() {
+            get: function () {
                 return browser;
             },
-            getName: function() {
+            getName: function () {
                 return browser.name;
             },
-            getPlatform: function() {
+            getPlatform: function () {
                 if (browser.platform === 'win') {
                     browser.platform = 'windows';
                 }
                 return browser.platform;
             },
-            getVersion: function() {
+            getVersion: function () {
                 return browser.versionNumber;
             },
-            isIE: function() {
+            isIE: function () {
                 return angular.isUndefined(browser.msie) ? null : browser.msie;
             },
-            isMobile: function() {
+            isMobile: function () {
                 return browser.android || browser.ipad || browser.iphone || browser["windows phone"];
             },
-            isDeskTop: function() {
+            isDeskTop: function () {
                 return browser.cros || browser.mac || browser.linux || browser.win;
             },
-            isWebKit: function() {
+            isWebKit: function () {
                 return browser.chrome || browser.opr || browser.safari;
             }
         };
 
     };
 
-    var $browserDetector = function(appBrowser) {
+    var $browserDetector = function (appBrowser) {
 
         return {
             restrict: "A",
-            link: function(scope, elm, attr) {
+            link: function (scope, elm, attr) {
 
                 if (attr.browserDetector == 'attr') {
                     // append browser details as attribute
