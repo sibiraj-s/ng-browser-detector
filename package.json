@@ -9,12 +9,12 @@
     "lint": "grunt lint",
     "postbuild": "sh ./scripts/postbuild.sh",
     "prebuild": "sh ./scripts/prebuild.sh",
-    "precommit": "yarn run lint && yarn run test:single-run",
-    "prerelease": "yarn run build",
+    "precommit": "npm run lint && npm run test:single-run",
+    "prerelease": "npm run build",
     "release": "sh ./scripts/release.sh",
     "start": "grunt serve",
-    "test": "./node_modules/.bin/karma start",
-    "test:single-run": "./node_modules/.bin/karma start --browsers Firefox --single-run",
+    "test": "karma start",
+    "test:single-run": "karma start --browsers Firefox --single-run",
     "watch": "grunt watch"
   },
   "repository": {

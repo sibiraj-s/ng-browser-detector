@@ -14,4 +14,4 @@ before_script:
   - sh -e /etc/init.d/xvfb start
 
 script:
-  - yarn run test:single-run
+  - npm run test:single-run
