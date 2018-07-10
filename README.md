@@ -1,5 +1,4 @@
-# ng-browser-detector [![Build Status](https://travis-ci.org/Sibiraj-S/ng-browser-detector.svg?branch=master)](https://travis-ci.org/Sibiraj-S/ng-browser-detector) [![Maintenance](https://img.shields.io/badge/maintained%20%3F-no-red.svg)](https://github.com/Sibiraj-S/ng-browser-detector)
-
+# ng-browser-detector [![Build Status](https://travis-ci.org/Sibiraj-S/ng-browser-detector.svg?branch=master)](https://travis-ci.org/Sibiraj-S/ng-browser-detector)
 
 A simple angularJs service to detect platform, browser and version
 
@@ -14,6 +13,7 @@ You can directly clone/download [here][ng-browser-detector]
 ```bash
 git clone git@github.com:Sibiraj-S/ng-browser-detector.git
 ```
+
 or use cdn
 
 ##### Minified
@@ -27,6 +27,7 @@ or use cdn
 ```bash
 //unpkg.com/ng-browser-detector@latest/ng-browser-detector.js
 ```
+
 or
 
 Install via Package managers such as [npm][npm] or [yarn][yarn]
@@ -88,7 +89,6 @@ a simple directive is included (usage : optional)
 ```
 
 the directive appends the browser details to element's class, if provided `browser-detector="attr"` then the details are added as attributes
-
 
 [npm]: https://www.npmjs.com/
 [yarn]: https://yarnpkg.com/lang/en/

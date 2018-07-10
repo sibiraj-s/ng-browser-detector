@@ -1,6 +1,6 @@
 {
   "name": "ng-browser-detector",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "AngularJs service to detect platform, browser and version",
   "scripts": {
     "build": "grunt build",
@@ -39,8 +39,8 @@
     "angular": ">=1.6.0"
   },
   "devDependencies": {
-    "angular": "^1.6.9",
-    "angular-mocks": "^1.6.9",
+    "angular": "^1.6.10",
+    "angular-mocks": "^1.6.10",
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.1.0",
     "grunt": "^1.0.2",
@@ -49,15 +49,15 @@
     "grunt-contrib-jshint": "^1.1.0",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^3.3.0",
-    "grunt-contrib-watch": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.1",
     "husky": "^0.14.3",
     "jasmine-core": "^3.1.0",
-    "karma": "^2.0.0",
+    "karma": "^2.0.2",
     "karma-chrome-launcher": "^2.2.0",
     "karma-firefox-launcher": "^1.1.0",
-    "karma-jasmine": "^1.1.1",
+    "karma-jasmine": "^1.1.2",
     "karma-mocha-reporter": "^2.2.5",
-    "load-grunt-tasks": "^3.5.2"
+    "load-grunt-tasks": "^4.0.0"
   },
   "config": {
     "commitizen": {
