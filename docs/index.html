@@ -6,12 +6,12 @@
   <meta charset="utf-8">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
-  <link href="//unpkg.com/bootstrap@4.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="//unpkg.com/bootstrap@4.1.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
   <title>AngularJs Browser Detector</title>
 </head>
 
-<body ng-controller="mainController">
+<body ng-controller="mainController" ng-cloak>
   <div class="contain">
     <div class="col40">
       <a class="github-button" href="https://github.com/Sibiraj-S" aria-label="Follow @Sibiraj-S on GitHub">Follow @Sibiraj-S</a>
@@ -62,10 +62,10 @@
     </div>
   </div>
   <!-- dependencies -->
-  <script type="text/javascript" src="//unpkg.com/angular@1.6.9/angular.min.js"></script>
+  <script type="text/javascript" src="//unpkg.com/angular@1.7.2/angular.min.js"></script>
   <script type="text/javascript" src="//unpkg.com/ng-browser-detector@latest/ng-browser-detector.min.js"></script>
   <!-- app scripts -->
-  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="./app.js"></script>
   <!-- highlight js -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <!-- Github buttons -->
@@ -73,10 +73,6 @@
   <script>
     hljs.initHighlightingOnLoad();
   </script>
-</body>
-
-</html>
-/script>
 </body>
 
 </html>
