@@ -39,6 +39,7 @@
     "angular": ">=1.6.0"
   },
   "devDependencies": {
+    "angular": "^1.7.2",
     "chalk": "^2.4.1",
     "grunt": "^1.0.3",
     "grunt-contrib-concat": "^1.0.1",
