@@ -1,0 +1,19 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 6
+    },
+    "rules": {
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "comma-dangle": [
+            "error",
+            "never"
+        ]
+    }
+}

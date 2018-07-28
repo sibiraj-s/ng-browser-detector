@@ -1,7 +1,5 @@
-/**
- * reads package.json file
- * add main field and remove few unwanted fields
- */
+'use strict';
+
 const fs = require('fs');
 
 fs.readFile('dist/package.json', 'utf8', function (err, data) {
@@ -12,7 +10,7 @@ fs.readFile('dist/package.json', 'utf8', function (err, data) {
     pkg['main'] = 'ng-browser-detector.min.js';
     delete pkg['scripts'];
     delete pkg['devDependencies'];
-    delete pkg['config'];
+    delete pkg['private'];
 
     fs.writeFile('dist/package.json', JSON.stringify((pkg), null, 2), 'utf8', function (err) {
         if (err) throw err;

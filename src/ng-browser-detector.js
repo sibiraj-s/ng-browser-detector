@@ -1,5 +1,7 @@
 (function () {
 
+    'use strict';
+
     var $browser = function ($window) {
 
         var matched, browser;
@@ -13,8 +15,8 @@
                 /(webkit)[ \/]([\w.]+)/.exec(ua) ||
                 /(opera)(?:.*version|)[ \/]([\w.]+)/.exec(ua) ||
                 /(msie) ([\w.]+)/.exec(ua) ||
-                ua.indexOf("trident") >= 0 && /(rv)(?::| )([\w.]+)/.exec(ua) ||
-                ua.indexOf("compatible") < 0 && /(mozilla)(?:.*? rv:([\w.]+)|)/.exec(ua) || [];
+                ua.indexOf('trident') >= 0 && /(rv)(?::| )([\w.]+)/.exec(ua) ||
+                ua.indexOf('compatible') < 0 && /(mozilla)(?:.*? rv:([\w.]+)|)/.exec(ua) || [];
 
             var platform_match = /(ipad)/.exec(ua) ||
                 /(iphone)/.exec(ua) ||
@@ -25,10 +27,10 @@
                 /(linux)/.exec(ua) ||
                 /(cros)/.exec(ua) || [];
             return {
-                browser: match[5] || match[3] || match[1] || "",
-                version: match[2] || match[4] || "0",
-                versionNumber: match[4] || match[2] || "0",
-                platform: platform_match[0] || ""
+                browser: match[5] || match[3] || match[1] || '',
+                version: match[2] || match[4] || '0',
+                versionNumber: match[4] || match[2] || '0',
+                platform: platform_match[0] || ''
             };
         };
 
@@ -43,22 +45,22 @@
             browser[matched.platform] = true;
         }
         if (browser.opr) {
-            var opera = "opera";
+            var opera = 'opera';
             matched.browser = opera;
             browser[opera] = true;
         }
         if (browser.rv) {
-            var ie = "msie";
+            var ie = 'msie';
             matched.browser = ie;
             browser[ie] = true;
         }
         if (browser.edge) {
-            var edge = "edge";
+            var edge = 'edge';
             matched.browser = edge;
             browser[edge] = true;
         }
         if (browser.safari && browser.android) {
-            var android = "android";
+            var android = 'android';
             matched.browser = android;
             browser[android] = true;
         }
@@ -85,7 +87,7 @@
                 return angular.isUndefined(browser.msie) ? null : browser.msie;
             },
             isMobile: function () {
-                return browser.android || browser.ipad || browser.iphone || browser["windows phone"];
+                return browser.android || browser.ipad || browser.iphone || browser['windows phone'];
             },
             isDeskTop: function () {
                 return browser.cros || browser.mac || browser.linux || browser.win;
@@ -100,7 +102,7 @@
     var $browserDetector = function (appBrowser) {
 
         return {
-            restrict: "A",
+            restrict: 'A',
             link: function (scope, elm, attr) {
 
                 if (attr.browserDetector == 'attr') {

@@ -22,7 +22,7 @@ module.exports = grunt => {
                     sourcemap: 'none'
                 },
                 files: {
-                    'docs/style.css': 'docs/style.scss',
+                    'docs/style.css': 'docs/style.scss'
                 }
             }
         },
@@ -33,11 +33,16 @@ module.exports = grunt => {
             },
             dist: {
                 src: ['src/ng-browser-detector.js'],
-                dest: 'dist/ng-browser-detector.js',
+                dest: 'dist/ng-browser-detector.js'
             }
         },
-        jshint: {
-            all: ['src/**/*.js', 'test/**/*.js']
+        eslint: {
+            target: [
+                'src/**/*.js',
+                'test/**/*.js',
+                'scripts/**/*.js',
+                'Gruntfile.js'
+            ]
         },
         uglify: {
             options: {
@@ -80,8 +85,8 @@ module.exports = grunt => {
     });
 
     // grunt tasks
-    grunt.registerTask('develop', ["watch"]);
-    grunt.registerTask("serve", ["connect"]);
-    grunt.registerTask('lint', ['jshint']);
-    grunt.registerTask("build", ["jshint", "concat", "uglify"]);
+    grunt.registerTask('develop', ['watch']);
+    grunt.registerTask('serve', ['connect']);
+    grunt.registerTask('lint', ['eslint']);
+    grunt.registerTask('build', ['lint', 'concat', 'uglify']);
 };
