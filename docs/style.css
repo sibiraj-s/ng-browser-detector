@@ -1,9 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
   display: none !important;
 }
 
-.btn:active, .btn:active:focus, .btn:focus {
+.btn:active,
+.btn:active:focus,
+.btn:focus {
   outline: 0;
 }
 
@@ -19,7 +27,7 @@ body {
   width: 100%;
   min-width: 1200px;
   overflow: hidden;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
 }
 body .navbar {
