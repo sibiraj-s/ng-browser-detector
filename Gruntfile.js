@@ -8,7 +8,6 @@ var banner = '/*!\n * @module <%= pkg.name %>\n'
   + ' */\n\n';
 
 module.exports = grunt => {
-
   // load all grunt tasks
   require('load-grunt-tasks')(grunt);
 

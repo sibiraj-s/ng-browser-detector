@@ -7,7 +7,8 @@ module.exports = {
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
     'comma-dangle': ['error', 'never'],
-    'operator-linebreak': ['error', 'before']
+    'operator-linebreak': ['error', 'before'],
+    'padded-blocks': ['error', 'never']
   },
   globals: {
     angular: true

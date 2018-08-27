@@ -1,9 +1,7 @@
 (function () {
-
   'use strict';
 
   var $browser = function ($window) {
-
     var matched, browser;
     var uaMatch = function (ua) {
       ua = ua.toLowerCase();
@@ -96,27 +94,22 @@
         return browser.chrome || browser.opr || browser.safari;
       }
     };
-
   };
 
   var $browserDetector = function (appBrowser) {
-
     return {
       restrict: 'A',
       link: function (scope, elm, attr) {
-
         if (attr.browserDetector == 'attr') {
           // append browser details as attribute
           elm.attr('browser', appBrowser.getName());
           elm.attr('browser-version', 'v-' + appBrowser.getVersion());
           elm.attr('platform', appBrowser.getPlatform());
-
         } else {
           // append browser details to class
           elm.addClass(appBrowser.getPlatform());
           elm.addClass(appBrowser.getName());
           elm.addClass('v-' + appBrowser.getVersion());
-
         }
       }
     };

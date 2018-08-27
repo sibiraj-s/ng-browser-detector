@@ -3,7 +3,6 @@
 const fs = require('fs');
 
 fs.readFile('dist/package.json', 'utf8', (readErr, data) => {
-
   if (readErr) throw readErr;
 
   const pkg = JSON.parse(data);
@@ -16,5 +15,4 @@ fs.readFile('dist/package.json', 'utf8', (readErr, data) => {
     if (writeErr) throw writeErr;
     console.log('postbuild: package.json written');
   });
-
 });
