@@ -16,13 +16,13 @@ git clone git@github.com:Sibiraj-S/ng-browser-detector.git
 
 or use cdn
 
-##### Minified
+**Minified:**
 
 ```bash
 //unpkg.com/ng-browser-detector@latest/ng-browser-detector.min.js
 ```
 
-##### Pretty Printed
+**Pretty Printed:**
 
 ```bash
 //unpkg.com/ng-browser-detector@latest/ng-browser-detector.js
