@@ -5,35 +5,40 @@
     var matched, browser;
     var uaMatch = function (ua) {
       ua = ua.toLowerCase();
-      var match = /(edge)\/([\w.]+)/.exec(ua)
-        || /(opr)[\/]([\w.]+)/.exec(ua)
-        || /(chrome)[ \/]([\w.]+)/.exec(ua)
-        || /(version)(applewebkit)[ \/]([\w.]+).*(safari)[ \/]([\w.]+)/.exec(ua)
-        || /(webkit)[ \/]([\w.]+).*(version)[ \/]([\w.]+).*(safari)[ \/]([\w.]+)/.exec(ua)
-        || /(webkit)[ \/]([\w.]+)/.exec(ua)
-        || /(opera)(?:.*version|)[ \/]([\w.]+)/.exec(ua)
-        || /(msie) ([\w.]+)/.exec(ua)
-        || ua.indexOf('trident') >= 0 && /(rv)(?::| )([\w.]+)/.exec(ua)
-        || ua.indexOf('compatible') < 0 && /(mozilla)(?:.*? rv:([\w.]+)|)/.exec(ua) || [];
 
-      var platform_match = /(ipad)/.exec(ua)
+      var match = /(edge)\/([\w.]+)/.exec(ua)
+        || /(opr)[/]([\w.]+)/.exec(ua)
+        || /(chrome)[/]([\w.]+)/.exec(ua)
+        || /(version)(applewebkit)[/]([\w.]+).*(safari)[/]([\w.]+)/.exec(ua)
+        || /(webkit)[/]([\w.]+).*(version)[/]([\w.]+).*(safari)[/]([\w.]+)/.exec(ua)
+        || /(webkit)[/]([\w.]+)/.exec(ua)
+        || /(opera)(?:.*version|)[/]([\w.]+)/.exec(ua)
+        || /(msie) ([\w.]+)/.exec(ua)
+        || (ua.indexOf('trident') >= 0 && /(rv)(?::| )([\w.]+)/.exec(ua))
+        || (ua.indexOf('compatible') < 0 && /(mozilla)(?:.*? rv:([\w.]+)|)/.exec(ua))
+        || [];
+
+      var platformMatch = /(ipad)/.exec(ua)
         || /(iphone)/.exec(ua)
         || /(android)/.exec(ua)
         || /(windows phone)/.exec(ua)
         || /(win)/.exec(ua)
         || /(mac)/.exec(ua)
         || /(linux)/.exec(ua)
-        || /(cros)/.exec(ua) || [];
+        || /(cros)/.exec(ua)
+        || [];
+
       return {
         browser: match[5] || match[3] || match[1] || '',
         version: match[2] || match[4] || '0',
         versionNumber: match[4] || match[2] || '0',
-        platform: platform_match[0] || ''
+        platform: platformMatch[0] || ''
       };
     };
 
     matched = uaMatch($window.navigator.userAgent);
     browser = {};
+
     if (matched.browser) {
       browser[matched.browser] = true;
       browser.version = matched.version;
@@ -62,6 +67,7 @@
       matched.browser = android;
       browser[android] = true;
     }
+
     browser.name = matched.browser;
     browser.platform = matched.platform;
 
@@ -100,7 +106,7 @@
     return {
       restrict: 'A',
       link: function (scope, elm, attr) {
-        if (attr.browserDetector == 'attr') {
+        if (attr.browserDetector === 'attr') {
           // append browser details as attribute
           elm.attr('browser', appBrowser.getName());
           elm.attr('browser-version', 'v-' + appBrowser.getVersion());

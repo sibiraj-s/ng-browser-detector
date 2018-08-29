@@ -71,7 +71,7 @@ module.exports = grunt => {
     watch: {
       scripts: {
         files: ['src/**/*.js'],
-        tasks: ['jshint']
+        tasks: ['eslint']
       },
       sass: {
         files: ['docs/**/*.scss'],
