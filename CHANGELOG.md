@@ -11,6 +11,13 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## Unreleased
+
+#### Dependency Updates
+
+* update eslint to v5.5.0 ([2feb318](https://github.com/Sibiraj-S/ng-browser-detector/commit/2feb318))
+* update grunt-contrib-uglify to v4.0.0 ([2feb318](https://github.com/Sibiraj-S/ng-browser-detector/commit/2feb318))
+
 ## v1.1.5 (2018-08-29)
 
 #### Internal
