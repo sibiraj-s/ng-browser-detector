@@ -11,12 +11,20 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
-## Unreleased
+## v1.1.6 (2018-10-05)
 
 #### Dependency Updates
 
-* update eslint to v5.5.0 ([2feb318](https://github.com/sibiraj-s/ng-browser-detector/commit/2feb318))
 * update grunt-contrib-uglify to v4.0.0 ([2feb318](https://github.com/sibiraj-s/ng-browser-detector/commit/2feb318))
+* update eslint to v5.6.1 ([2376093](https://github.com/sibiraj-s/ng-browser-detector/commit/2376093))
+* update husky to v1.1.0 ([2376093](https://github.com/sibiraj-s/ng-browser-detector/commit/2376093))
+* update grunt-contrib-connect to v2.0.0 ([2376093](https://github.com/sibiraj-s/ng-browser-detector/commit/2376093))
+* update eslint-plugin-promise to v4.0.1 ([2376093](https://github.com/sibiraj-s/ng-browser-detector/commit/2376093))
+
+#### Internal
+
+* update github username ([7f62d0a](https://github.com/sibiraj-s/ng-browser-detector/commit/7f62d0a))
+* remove vscode settings in favour of editorconfig ([ce31847](https://github.com/sibiraj-s/ng-browser-detector/commit/ce31847))
 
 ## v1.1.5 (2018-08-29)
 
