@@ -2,6 +2,12 @@
   "name": "ng-browser-detector",
   "version": "1.1.6",
   "description": "AngularJs service to detect platform, browser and version",
+  "author": "sibiraj-s",
+  "license": "MIT",
+  "private": true,
+  "repository": "https://github.com/sibiraj-s/ng-browser-detector.git",
+  "bugs": "https://github.com/sibiraj-s/ng-browser-detector/issues",
+  "homepage": "https://github.com/sibiraj-s/ng-browser-detector#readme",
   "scripts": {
     "build": "grunt build",
     "develop": "grunt develop",
@@ -15,10 +21,6 @@
     "test": "npm run lint",
     "watch": "grunt watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sibiraj-s/ng-browser-detector.git"
-  },
   "keywords": [
     "angularjs-browser-detector",
     "platform-detector",
@@ -27,13 +29,6 @@
     "device-detector",
     "angularjs-device-detector"
   ],
-  "author": "sibiraj-s",
-  "license": "MIT",
-  "private": true,
-  "bugs": {
-    "url": "https://github.com/sibiraj-s/ng-browser-detector/issues"
-  },
-  "homepage": "https://github.com/sibiraj-s/ng-browser-detector#readme",
   "peerDependencies": {
     "angular": ">=1.6.0"
   },
