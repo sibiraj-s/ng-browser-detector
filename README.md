@@ -19,13 +19,13 @@ or use cdn
 **Minified:**
 
 ```bash
-//unpkg.com/ng-browser-detector@latest/ng-browser-detector.min.js
+//cdn.jsdelivr.net/npm/ng-browser-detector@latest/ng-browser-detector.min.js
 ```
 
 **Pretty Printed:**
 
 ```bash
-//unpkg.com/ng-browser-detector@latest/ng-browser-detector.js
+//cdn.jsdelivr.net/npm/ng-browser-detector@latest/ng-browser-detector.js
 ```
 
 or
