@@ -1,5 +1,3 @@
-'use strict';
-
 const chalk = require('chalk');
 
 const { RELEASE_MODE } = process.env;
@@ -10,6 +8,6 @@ const errorMessgae = `${'Publishing directly to npm is restricted.'
   + '\n';
 
 if (!RELEASE_MODE) {
-  console.log(chalk.red(errorMessgae));
+  console.log(chalk.red(errorMessgae)); // eslint-disable-line no-console
   process.exit(1);
 }

@@ -1,11 +1,7 @@
 module.exports = {
-  extends: ['standard'],
-  parserOptions: {
-    ecmaVersion: 6
-  },
+  extends: ['airbnb-base'],
   rules: {
-    semi: ['error', 'always'],
-    'operator-linebreak': ['error', 'before']
+    'import/no-extraneous-dependencies': 'off'
   },
   globals: {
     angular: true

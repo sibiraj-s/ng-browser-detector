@@ -36,22 +36,24 @@
     "angular": ">=1.6.0"
   },
   "devDependencies": {
-    "angular": "^1.7.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "angular": "^1.7.5",
+    "babel-preset-minify": "^0.5.0",
     "chalk": "^2.4.1",
-    "eslint": "^5.6.1",
-    "eslint-config-standard": "^12.0.0",
+    "eslint": "^5.11.1",
+    "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^7.0.1",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0",
     "grunt": "^1.0.3",
+    "grunt-babel": "^8.0.0",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-connect": "^2.0.0",
-    "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^4.0.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-eslint": "^21.0.0",
-    "husky": "^1.1.0",
-    "load-grunt-tasks": "^4.0.0"
+    "grunt-sass": "^3.0.2",
+    "husky": "^1.2.1",
+    "load-grunt-tasks": "^4.0.0",
+    "sass": "^1.15.2"
   }
 }
