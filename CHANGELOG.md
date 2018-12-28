@@ -6,10 +6,31 @@ All notable changes to this project will be documented in this file.
 > - Features
 > - Bug Fixes
 > - Performance Improvements
+> - Enhancements
 > - Dependency Updates
 > - Breaking Changes
 > - Documentation
 > - Internal
+
+## v1.1.7 (2018-12-28)
+
+#### Enhancements
+
+- use babel to transipile and minify output files ([beb03d0](https://github.com/sibiraj-s/ng-browser-detector/commit/beb03d0))
+- migrate from `unpkg` cdn to `jsdelivr` ([eca1e77](https://github.com/sibiraj-s/ng-browser-detector/commit/eca1e77))
+
+#### Internal
+
+- extend LICENSE to year 2019 ([3be368a](https://github.com/sibiraj-s/ng-browser-detector/commit/3be368a))
+- remove grunt-contrib-uglify in favour of babel's minify preset ([beb03d0](https://github.com/sibiraj-s/ng-browser-detector/commit/beb03d0))
+- replace `eslint-config-standard` with `eslint-config-airbnb-base` ([beb03d0](https://github.com/sibiraj-s/ng-browser-detector/commit/beb03d0))
+- replace `grunt-contrib-sass` with `grunt-sass` ([beb03d0](https://github.com/sibiraj-s/ng-browser-detector/commit/beb03d0))
+- convert source code to es6 syntax ([beb03d0](https://github.com/sibiraj-s/ng-browser-detector/commit/beb03d0))
+
+#### Dependency Updates
+
+- update eslint to v5.11.1 ([beb03d0](https://github.com/sibiraj-s/ng-browser-detector/commit/beb03d0))
+- update husky to v1.2.1 ([beb03d0](https://github.com/sibiraj-s/ng-browser-detector/commit/beb03d0))
 
 ## v1.1.6 (2018-10-05)
 
