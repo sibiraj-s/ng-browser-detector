@@ -18,6 +18,9 @@ All notable changes to this project will be documented in this file.
 #### Internal
 
 - update angular.js to v1.7.5 in demo page ([45b7cc8](https://github.com/sibiraj-s/ng-browser-detector/commit/45b7cc8))
+
+#### Dependency Updates
+
 - update husky to v1.3.1 ([e77f141](https://github.com/sibiraj-s/ng-browser-detector/commit/e77f141))
 
 ## v1.1.7 (2018-12-28)
