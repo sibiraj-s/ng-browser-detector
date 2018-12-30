@@ -11,6 +11,6 @@ fs.readFile('dist/package.json', 'utf8', (readErr, data) => {
 
   fs.writeFile('dist/package.json', JSON.stringify((pkg), null, 2), 'utf8', (writeErr) => {
     if (writeErr) throw writeErr;
-    console.log('postbuild: package.json written'); // eslint-disable-line no-console
+    console.log('postbuild: package.json written');
   });
 });

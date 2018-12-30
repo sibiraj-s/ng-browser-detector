@@ -8,6 +8,6 @@ const errorMessgae = `${'Publishing directly to npm is restricted.'
   + '\n';
 
 if (!RELEASE_MODE) {
-  console.log(chalk.red(errorMessgae)); // eslint-disable-line no-console
+  console.log(chalk.red(errorMessgae));
   process.exit(1);
 }
