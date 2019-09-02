@@ -79,7 +79,7 @@ const $browser = ($window) => {
   };
 };
 
-const $browserDetector = appBrowser => ({
+const $browserDetector = (appBrowser) => ({
   restrict: 'A',
   link: (scope, elm, attr) => {
     if (attr.browserDetector === 'attr') {
