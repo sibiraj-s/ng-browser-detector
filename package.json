@@ -12,17 +12,14 @@
     "node": "^10"
   },
   "scripts": {
-    "build": "grunt build",
-    "develop": "grunt develop",
-    "lint": "grunt lint",
-    "postbuild": "sh ./scripts/postbuild.sh",
-    "prebuild": "sh ./scripts/prebuild.sh",
+    "build": "gulp build",
+    "develop": "gulp develop",
+    "serve": "gulp serve",
+    "lint": "eslint . --ignore-path .gitignore",
     "prepublishOnly": "node ./scripts/prepublish.js",
     "prerelease": "npm run build",
     "release": "sh ./scripts/release.sh",
-    "start": "grunt serve",
-    "test": "npm run lint",
-    "watch": "grunt watch"
+    "test": "npm run lint"
   },
   "keywords": [
     "angularjs-browser-detector",
@@ -35,25 +32,31 @@
   "peerDependencies": {
     "angular": ">=1.6.0"
   },
+  "dependencies": {
+    "browser-dtector": "^2.0.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
     "angular": "^1.7.9",
     "babel-preset-minify": "^0.5.1",
+    "browser-sync": "^2.26.7",
     "chalk": "^3.0.0",
-    "eslint": "^6.7.1",
+    "del": "^5.1.0",
+    "eslint": "^6.7.2",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
-    "grunt": "^1.0.4",
-    "grunt-babel": "^8.0.0",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-connect": "^2.1.0",
-    "grunt-contrib-uglify": "^4.0.1",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-eslint": "^22.0.0",
-    "grunt-sass": "^3.1.0",
+    "gulp": "^4.0.2",
+    "gulp-plugin-terser": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
     "husky": "^3.1.0",
-    "load-grunt-tasks": "^5.1.0",
-    "sass": "^1.23.7"
+    "lint-staged": "^9.5.0",
+    "livereload": "^0.8.2",
+    "rollup": "^1.27.8",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "sass": "^1.23.7",
+    "terser": "^4.4.2"
   }
 }
