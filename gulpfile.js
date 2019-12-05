@@ -70,6 +70,7 @@ function updatePackageJSON() {
 async function copyFiles() {
   gulp.src('README.md').pipe(gulp.dest(outDir));
   gulp.src('CHANGELOG.md').pipe(gulp.dest(outDir));
+  gulp.src('LICENSE').pipe(gulp.dest(outDir));
   gulp.src('package.json')
     .pipe(updatePackageJSON())
     .pipe(gulp.dest(outDir));
