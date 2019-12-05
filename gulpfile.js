@@ -1,5 +1,7 @@
+const path = require('path');
+const fs = require('fs');
+
 const gulp = require('gulp');
-const del = require('del');
 const rollup = require('rollup');
 const resolve = require('rollup-plugin-node-resolve');
 const babel = require('rollup-plugin-babel');
@@ -15,7 +17,7 @@ const pkg = require('./package.json');
 // set compiler for gulp sass
 sass.compiler = dartSass;
 
-const outDir = 'dist';
+const outDir = path.resolve(__dirname, 'dist');
 const banner = `/*!
  * @module ${pkg.name}
  * @description ${pkg.description}
@@ -26,7 +28,7 @@ const banner = `/*!
 `;
 
 async function cleanOutDir() {
-  await del(outDir);
+  await fs.promises.rmdir(outDir, { recursive: true });
 }
 
 async function compile() {
@@ -56,6 +58,7 @@ function updatePackageJSON() {
     delete json.dependencies;
     delete json.devDependencies;
     delete json.private;
+    delete json.engines;
 
     modifiedFile.contents = Buffer.from(JSON.stringify((json), null, 2));
     callback(null, modifiedFile);
