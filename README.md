@@ -60,26 +60,26 @@ in routes config
 app.controller('mainController', ['$scope', 'appBrowser', function($scope, appBrowser) {
    $scope.appBrowser = appBrowser;
 
-   appBrowser.getPlatform();
+   appBrowser.getPlatformName();
 }]);
 ```
 
 to get platform
 
 ```js
-appBrowser.getPlatform();
+appBrowser.getPlatformName();
 ```
 
 to get browser name
 
 ```js
-appBrowser.getName();
+appBrowser.getBrowserName();
 ```
 
 to get browser version
 
 ```js
-appBrowser.getVersion();
+appBrowser.getBrowserVersion();
 ```
 
 a simple directive is included (usage : optional)
