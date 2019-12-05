@@ -10,7 +10,7 @@ env:
 
 jobs:
   test:
-    name: Jest
+    name: Karma
     runs-on: ubuntu-latest
 
     steps:
