@@ -51,16 +51,14 @@ Import the modules required for ng-browser-detector.
 add `ngBrowser` dependency to the module
 
 ```js
-angular.module('myApp', ['ngBrowser'])
+const app = angular.module('myApp', ['ngBrowser'])
 ```
 
 in routes config
 
 ```js
-app.controller('mainController', ['$scope', 'appBrowser', function($scope, appBrowser) {
+app.controller('BrowserDetectController', ['$scope', 'appBrowser', function BrowserDetectController($scope, appBrowser) {
    $scope.appBrowser = appBrowser;
-
-   appBrowser.getPlatformName();
 }]);
 ```
 
@@ -70,19 +68,9 @@ to get platform
 appBrowser.getPlatformName();
 ```
 
-to get browser name
+refer https://github.com/sibiraj-s/browser-dtector#api for more info
 
-```js
-appBrowser.getBrowserName();
-```
-
-to get browser version
-
-```js
-appBrowser.getBrowserVersion();
-```
-
-a simple directive is included (usage : optional)
+A simple directive is included (usage : optional)
 
 ```html
 <body browser-detector></body>
