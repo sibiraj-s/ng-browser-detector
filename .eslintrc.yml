@@ -1,0 +1,17 @@
+extends: 
+  - airbnb-base
+
+plugins:
+  - angular
+  - jasmine
+  
+rules:
+  import/no-extraneous-dependencies: off
+  no-console: off
+  
+globals:
+  angular: true
+
+env:
+  jasmine: true
+  angular/mocks: true

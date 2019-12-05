@@ -1,7 +1,6 @@
-'use strict';
 
-var app = angular.module('myApp', ['ngBrowser']);
+const app = angular.module('app', ['ngBrowser']);
 
-app.controller('mainController', ['$scope', 'appBrowser', function ($scope, appBrowser) {
+app.controller('BrowserDetectController', ['$scope', 'appBrowser', function BrowserDetectController($scope, appBrowser) {
   $scope.appBrowser = appBrowser;
 }]);

@@ -5,19 +5,32 @@ const $browser = ($window) => {
   return browserDetector;
 };
 
+
 const $browserDetector = (appBrowser) => ({
   restrict: 'A',
-  link: (scope, elm, attr) => {
+  link: (_, elm, attr) => {
+    function serialize(str) {
+      if (typeof str === 'string') {
+        return str.toLowerCase().replace(/ /g, '-');
+      }
+
+      return '';
+    }
+
+    const browserName = serialize(appBrowser.getBrowserName());
+    const browserVersion = serialize(appBrowser.getBrowserVersion());
+    const platformName = serialize(appBrowser.getPlatformName());
+
     if (attr.browserDetector === 'attr') {
       // append browser details as attribute
-      elm.attr('browser', appBrowser.getBrowserName());
-      elm.attr('browser-version', `v-${appBrowser.getBrowserVersion()}`);
-      elm.attr('platform', appBrowser.getPlatformName());
+      elm.attr('browser', browserName);
+      elm.attr('browser-version', `v-${browserVersion}`);
+      elm.attr('platform', platformName);
     } else {
       // append browser details to class
-      elm.addClass(appBrowser.getPlatformName());
-      elm.addClass(appBrowser.getBrowserName());
-      elm.addClass(`v-${appBrowser.getBrowserVersion()}`);
+      elm.addClass(browserName);
+      elm.addClass(platformName);
+      elm.addClass(`v-${browserVersion}`);
     }
   },
 });
