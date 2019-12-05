@@ -53,6 +53,7 @@ function updatePackageJSON() {
 
     json.main = 'ng-browser-detector.min.js';
     delete json.scripts;
+    delete json.dependencies;
     delete json.devDependencies;
     delete json.private;
 
