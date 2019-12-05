@@ -9,7 +9,7 @@
   "bugs": "https://github.com/sibiraj-s/ng-browser-detector/issues",
   "homepage": "https://github.com/sibiraj-s/ng-browser-detector#readme",
   "engines": {
-    "node": "^10"
+    "node": ">=10"
   },
   "scripts": {
     "build": "gulp build",

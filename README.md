@@ -1,4 +1,4 @@
-# ng-browser-detector [![Build Status](https://travis-ci.com/sibiraj-s/ng-browser-detector.svg?branch=master)](https://travis-ci.com/sibiraj-s/ng-browser-detector)
+# ng-browser-detector [![Tests](https://github.com/sibiraj-s/ng-browser-detector/workflows/Tests/badge.svg)](https://github.com/sibiraj-s/ng-browser-detector/actions)
 
 A simple angularJs service to detect platform, browser and version
 
