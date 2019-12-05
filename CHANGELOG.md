@@ -14,6 +14,12 @@ All notable changes to this project will be documented in this file.
 > - Internal
 > - Unreleased
 
+## v2.0.1 (2019-12-05)
+
+#### Internal
+
+- publish LICENSE to npm ([b1d528a](https://github.com/sibiraj-s/ng-browser-detector/commit/b1d528a))
+
 ## v2.0.0 (2019-12-05)
 
 #### Enhancements
