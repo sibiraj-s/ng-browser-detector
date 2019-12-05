@@ -8,6 +8,7 @@ const sourcemap = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
 const dartSass = require('sass');
 const browserSync = require('browser-sync');
+const through2 = require('through2');
 
 const pkg = require('./package.json');
 
@@ -45,10 +46,29 @@ async function compile() {
   });
 }
 
+function updatePackageJSON() {
+  const transform = through2.obj((file, encoding, callback) => {
+    const modifiedFile = file.clone();
+    const json = JSON.parse(file.contents.toString());
+
+    json.main = 'ng-browser-detector.min.js';
+    delete json.scripts;
+    delete json.devDependencies;
+    delete json.private;
+
+    modifiedFile.contents = Buffer.from(JSON.stringify((json), null, 2));
+    callback(null, modifiedFile);
+  });
+
+  return transform;
+}
+
 async function copyFiles() {
   gulp.src('README.md').pipe(gulp.dest(outDir));
   gulp.src('CHANGELOG.md').pipe(gulp.dest(outDir));
-  gulp.src('package.json').pipe(gulp.dest(outDir));
+  gulp.src('package.json')
+    .pipe(updatePackageJSON())
+    .pipe(gulp.dest(outDir));
 }
 
 async function minify() {
