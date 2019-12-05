@@ -29,9 +29,6 @@
     "device-detector",
     "angularjs-device-detector"
   ],
-  "peerDependencies": {
-    "angular": ">=1.6.0"
-  },
   "dependencies": {
     "browser-dtector": "^2.0.0"
   },
