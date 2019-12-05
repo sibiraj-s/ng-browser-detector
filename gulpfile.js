@@ -47,7 +47,7 @@ async function compile() {
 }
 
 function updatePackageJSON() {
-  const transform = through2.obj((file, encoding, callback) => {
+  const transform = through2.obj((file, _, callback) => {
     const modifiedFile = file.clone();
     const json = JSON.parse(file.contents.toString());
 
