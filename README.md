@@ -57,9 +57,11 @@ const app = angular.module('myApp', ['ngBrowser'])
 in routes config
 
 ```js
-app.controller('BrowserDetectController', ['$scope', 'appBrowser', function BrowserDetectController($scope, appBrowser) {
-   $scope.appBrowser = appBrowser;
-}]);
+function BrowserDetectController($scope, appBrowser) {
+  $scope.appBrowser = appBrowser;
+}
+
+app.controller('BrowserDetectController', ['$scope', 'appBrowser', BrowserDetectController]);
 ```
 
 to get platform
