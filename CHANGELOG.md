@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 > **Tags**
+>
 > - Features
 > - Bug Fixes
 > - Performance Improvements
@@ -13,15 +14,28 @@ All notable changes to this project will be documented in this file.
 > - Internal
 > - Unreleased
 
-## Unreleased
+## v2.0.0 (2019-12-05)
+
+#### Enhancements
+
+- use [browser-dtector](https://www.npmjs.com/package/browser-dtector) for browser detection ([0974658](https://github.com/sibiraj-s/ng-browser-detector/commit/0974658))
 
 #### Internal
 
-- update angular.js to v1.7.5 in demo page ([45b7cc8](https://github.com/sibiraj-s/ng-browser-detector/commit/45b7cc8))
+- migrate from travis-ci to Github actions ([d7c0400](https://github.com/sibiraj-s/ng-browser-detector/commit/d7c0400))
+- use gulp task runner instead of grunt ([0974658](https://github.com/sibiraj-s/ng-browser-detector/commit/0974658))
+- add karma unit tests ([13eb077](https://github.com/sibiraj-s/ng-browser-detector/commit/13eb077))
 
 #### Dependency Updates
 
-- update husky to v1.3.1 ([e77f141](https://github.com/sibiraj-s/ng-browser-detector/commit/e77f141))
+- bump devDependencies ([e77f141](https://github.com/sibiraj-s/ng-browser-detector/commit/e77f141), [965c2fe](https://github.com/sibiraj-s/ng-browser-detector/commit/965c2fe))
+
+#### Breaking Changes
+
+- rename methods
+  - `getPlatform` -> `getPlatformName`
+  - `getName` -> `getBrowserName`
+  - `getVersion` -> `getBrowserVersion`
 
 ## v1.1.7 (2018-12-28)
 
@@ -119,7 +133,7 @@ Just a Maintenance Release.
 
 - detect Microsoft Edge browser ([514a277](https://github.com/sibiraj-s/ng-browser-detector/commit/514a277))
 
-#### Dependency Updates 
+#### Dependency Updates
 
 - update devDependencies ([514a277](https://github.com/sibiraj-s/ng-browser-detector/commit/514a277))
 
