@@ -103,13 +103,6 @@ function createServer() {
   });
 }
 
-const tasks = [
-  cleanOutDir,
-  compile,
-  minify,
-  copyFiles,
-];
-
 async function serve() {
   const server = createServer();
 
@@ -122,7 +115,7 @@ async function serve() {
 async function develop() {
   gulp.watch('src/*.js', compile);
 }
-const build = gulp.series(...tasks);
+const build = gulp.series(cleanOutDir, compile, minify, copyFiles);
 
 exports.serve = gulp.series(compile, serve);
 exports.develop = gulp.series(compile, develop);
