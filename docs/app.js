@@ -1,8 +1,8 @@
-
 const app = angular.module('app', ['ngBrowser']);
 
 function BrowserDetectController($scope, appBrowser) {
   $scope.appBrowser = appBrowser;
 }
 
-app.controller('BrowserDetectController', ['$scope', 'appBrowser', BrowserDetectController]);
+BrowserDetectController.$inject = ['$scope', 'appBrowser'];
+app.controller('BrowserDetectController', BrowserDetectController);
