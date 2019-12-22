@@ -11,7 +11,7 @@ live demo [here][demo]
 You can directly clone/download [here][ng-browser-detector]
 
 ```bash
-git clone git@github.com:sibiraj-s/ng-browser-detector.git
+git clone https://github.com/sibiraj-s/ng-browser-detector.git
 ```
 
 or use cdn
