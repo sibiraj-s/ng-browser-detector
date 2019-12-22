@@ -43,7 +43,6 @@ yarn add ng-browser-detector
 Import the modules required for ng-browser-detector.
 
  ```html
-<-- scripts -->
 <script src="angular/angular.min.js"></script>
 <script src="../ng-browser-detector.min.js"></script>
  ```
