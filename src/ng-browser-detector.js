@@ -1,8 +1,9 @@
-import BrowserDetector from 'browser-dtector';
-
 const $browser = ($window) => {
-  const browserDetector = new BrowserDetector($window.navigator.userAgent);
-  return browserDetector;
+  if (!$window.BrowserDtector || typeof $window.BrowserDtector !== 'function') {
+    throw new Error('BrowserDtector not installed...');
+  }
+
+  return new $window.BrowserDtector($window.navigator.userAgent);
 };
 
 

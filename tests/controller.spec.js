@@ -1,16 +1,18 @@
 describe('controller', () => {
   beforeEach(module('app'));
-  let $controller;
   let $scope;
 
-  beforeEach(inject((_$controller_, _$rootScope_, _appBrowser_) => {
-    $controller = _$controller_;
-    $scope = _$rootScope_.$new();
-    $controller('BrowserDetectController', { $scope, appBrowser: _appBrowser_ });
+  beforeEach(inject(($injector) => {
+    const $controller = $injector.get('$controller');
+    const $rootScope = $injector.get('$rootScope');
+    const appBrowser = $injector.get('appBrowser');
+
+    $scope = $rootScope.$new();
+    $controller('BrowserDetectController', { $scope, appBrowser });
   }));
 
   describe('$scope.appBrowser', () => {
-    it('sets the strength to "strong" if the password length is >8 chars', () => {
+    it('should initialize the controller properly', () => {
       expect(typeof $scope.appBrowser.parseUserAgent).toBe('function');
       expect($scope.appBrowser.getBrowserName()).toBeTruthy();
       expect($scope.appBrowser.getBrowserVersion()).toBeTruthy();

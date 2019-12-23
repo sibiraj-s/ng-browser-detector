@@ -1,6 +1,6 @@
 # ng-browser-detector [![Tests](https://github.com/sibiraj-s/ng-browser-detector/workflows/Tests/badge.svg)](https://github.com/sibiraj-s/ng-browser-detector/actions)
 
-A simple angularJs service to detect platform, browser and version
+A simple angularJs service to detect platform, browser and version.
 
 live demo [here][demo]
 
@@ -33,8 +33,12 @@ or
 Install via Package managers such as [npm][npm] or [yarn][yarn]
 
 ```bash
-npm install ng-browser-detector --save
+npm install browser-dtector
+npm install ng-browser-detector
+
 # or
+
+yarn add browser-dtector
 yarn add ng-browser-detector
 ```
 
@@ -42,15 +46,16 @@ yarn add ng-browser-detector
 
 Import the modules required for ng-browser-detector.
 
- ```html
-<script src="angular/angular.min.js"></script>
-<script src="../ng-browser-detector.min.js"></script>
- ```
+```html
+<script src="angular.min.js"></script>
+<script src="browser-dtector.umd.min.js"></script>
+<script src="ng-browser-detector.min.js"></script>
+```
 
 add `ngBrowser` dependency to the module
 
 ```js
-const app = angular.module('myApp', ['ngBrowser'])
+const app = angular.module('myApp', ['ngBrowser']);
 ```
 
 in routes config

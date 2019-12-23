@@ -28,7 +28,7 @@
     "device-detector",
     "angularjs-device-detector"
   ],
-  "dependencies": {
+  "peerDependencies": {
     "browser-dtector": "^2.0.0"
   },
   "devDependencies": {
@@ -37,6 +37,7 @@
     "angular": "^1.7.9",
     "angular-mocks": "^1.7.9",
     "babel-preset-minify": "^0.5.1",
+    "browser-dtector": "^2.1.0",
     "browser-sync": "^2.26.7",
     "chalk": "^3.0.0",
     "eslint": "^6.8.0",
@@ -54,7 +55,6 @@
     "lint-staged": "^9.5.0",
     "rollup": "^1.27.14",
     "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-node-resolve": "^5.2.0",
     "sass": "^1.24.0",
     "terser": "^4.4.3",
     "through2": "^3.0.1"

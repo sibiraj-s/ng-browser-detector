@@ -13,8 +13,9 @@ module.exports = (config) => {
     files: [
       'node_modules/angular/angular.js',
       'node_modules/angular-mocks/angular-mocks.js',
+      'node_modules/browser-dtector/browser-dtector.umd.js',
       'dist/ng-browser-detector.js',
-      'docs/app.js',
+      'tests/module.js',
       'tests/**/*spec.js',
     ],
 
