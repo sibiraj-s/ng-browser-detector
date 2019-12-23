@@ -14,6 +14,27 @@ All notable changes to this project will be documented in this file.
 > - Internal
 > - Unreleased
 
+## v3.0.0 (2019-12-05)
+
+#### Performance Improvements
+
+- require browser-dtector as external resource ([acd4d66](https://github.com/sibiraj-s/ng-browser-detector/commit/acd4d66))
+
+#### Dependency Updates
+
+- remove unwanted devDependencies ([9f0097a](https://github.com/sibiraj-s/ng-browser-detector/commit/9f0097a))
+- bump devDependencies versions ([347c80a](https://github.com/sibiraj-s/ng-browser-detector/commit/347c80a))
+
+#### Breaking Changes
+
+- [browser-dtector](https://github.com/sibiraj-s/browser-dtector) module must be loaded first
+
+```html
+<script src="angular.min.js"></script>
+<script src="browser-dtector.umd.min.js"></script>
+<script src="ng-browser-detector.min.js"></script>
+```
+
 ## v2.0.1 (2019-12-05)
 
 #### Internal
