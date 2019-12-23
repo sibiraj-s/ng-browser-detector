@@ -100,24 +100,26 @@ function createServer() {
       },
     },
     open: false,
+    rewriteRules: [{
+      match: '//cdn.jsdelivr.net/npm/ng-browser-detector@latest/ng-browser-detector.min.js',
+      replace: '/dist/ng-browser-detector.js',
+    }],
   });
 }
 
 async function serve() {
   const server = createServer();
 
+  gulp.watch('src/*.js', compile);
   gulp.watch('docs/*.scss', () => compileSass(server));
+
   gulp.watch('docs/*.html').on('change', server.reload);
   gulp.watch('docs/*.js').on('change', server.reload);
   gulp.watch('dist/*.js').on('change', server.reload);
 }
 
-async function develop() {
-  gulp.watch('src/*.js', compile);
-}
 const build = gulp.series(cleanOutDir, compile, minify, copyFiles);
 
 exports.serve = gulp.series(compile, serve);
-exports.develop = gulp.series(compile, develop);
 exports.build = build;
 exports.default = build;
