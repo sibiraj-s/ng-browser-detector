@@ -9,7 +9,6 @@ const sourcemap = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
 const dartSass = require('sass');
 const browserSync = require('browser-sync');
-const through2 = require('through2');
 
 const pkg = require('./package.json');
 
@@ -46,43 +45,39 @@ async function compile() {
   });
 }
 
-function updatePackageJSON() {
-  const transform = through2.obj((file, _, callback) => {
-    const modifiedFile = file.clone();
-    const json = JSON.parse(file.contents.toString());
+async function updatePackageJSON() {
+  const targetPkgJsonPath = path.resolve(outDir, 'package.json');
+  const jsonStr = await fs.promises.readFile(targetPkgJsonPath, 'utf-8');
+  const pkgJson = JSON.parse(jsonStr);
 
-    json.main = 'ng-browser-detector.min.js';
-    delete json.scripts;
-    delete json.devDependencies;
-    delete json.private;
-    delete json.engines;
+  pkgJson.main = 'ng-browser-detector.min.js';
+  delete pkgJson.scripts;
+  delete pkgJson.devDependencies;
+  delete pkgJson.private;
+  delete pkgJson.engines;
 
-    modifiedFile.contents = Buffer.from(JSON.stringify((json), null, 2));
-    callback(null, modifiedFile);
-  });
-
-  return transform;
+  await fs.promises.writeFile(targetPkgJsonPath, JSON.stringify(pkgJson, null, 2));
 }
 
-async function copyFiles() {
-  gulp.src('README.md').pipe(gulp.dest(outDir));
-  gulp.src('CHANGELOG.md').pipe(gulp.dest(outDir));
-  gulp.src('LICENSE').pipe(gulp.dest(outDir));
-  gulp.src('package.json')
-    .pipe(updatePackageJSON())
-    .pipe(gulp.dest(outDir));
+function copyFiles() {
+  return gulp.src([
+    'README.md',
+    'CHANGELOG.md',
+    'LICENSE',
+    'package.json',
+  ]).pipe(gulp.dest(outDir));
 }
 
-async function minify() {
-  gulp.src('dist/*.js')
+function minify() {
+  return gulp.src('dist/*.js')
     .pipe(sourcemap.init())
     .pipe(terser())
     .pipe(sourcemap.write('.'))
     .pipe(gulp.dest(outDir));
 }
 
-async function compileSass(server) {
-  gulp.src('docs/*.scss')
+function compileSass(server) {
+  return gulp.src('docs/*.scss')
     .pipe(sass())
     .pipe(gulp.dest('docs/'))
     .pipe(server.stream());
@@ -115,7 +110,7 @@ async function serve() {
   gulp.watch('dist/*.js').on('change', server.reload);
 }
 
-const build = gulp.series(cleanOutDir, compile, minify, copyFiles);
+const build = gulp.series(cleanOutDir, compile, minify, copyFiles, updatePackageJSON);
 
 exports.serve = gulp.series(compile, serve);
 exports.build = build;
