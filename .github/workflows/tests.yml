@@ -28,8 +28,5 @@ jobs:
       - name: NPM Install
         run: npm ci
 
-      - name: Run Rollup build
-        run: npm run build
-
       - name: Run Karma tests
         run: npm run test
