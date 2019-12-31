@@ -6,8 +6,6 @@ describe('<browser-detector> directive', () => {
   // Load the myApp module, which contains the directive
   beforeEach(module('app'));
 
-  // Store references to $rootScope and $compile
-  // so they are available to all tests in this describe block
   beforeEach(inject(($injector) => {
     $compile = $injector.get('$compile');
     $rootScope = $injector.get('$rootScope');
