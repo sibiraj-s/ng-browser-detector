@@ -3,7 +3,6 @@ describe('<browser-detector> directive', () => {
   let $rootScope;
   let $window;
 
-  // Load the myApp module, which contains the directive
   beforeEach(module('app'));
 
   beforeEach(inject(($injector) => {
