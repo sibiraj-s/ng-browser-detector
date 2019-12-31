@@ -55,5 +55,13 @@ module.exports = (config) => {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity,
+
+    // client options
+    client: {
+      // options for karma-jasmine
+      jasmine: {
+        random: false,
+      },
+    },
   });
 };
