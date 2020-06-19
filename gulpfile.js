@@ -3,7 +3,7 @@ const fs = require('fs');
 
 const gulp = require('gulp');
 const rollup = require('rollup');
-const babel = require('rollup-plugin-babel');
+const { babel } = require('@rollup/plugin-babel');
 const terser = require('gulp-plugin-terser');
 const sourcemap = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
@@ -33,7 +33,9 @@ async function compile() {
   const bundle = await rollup.rollup({
     input: 'src/ng-browser-detector.js',
     plugins: [
-      babel(),
+      babel({
+        babelHelpers: 'bundled',
+      }),
     ],
   });
 
