@@ -6,7 +6,6 @@ const $browser = ($window) => {
   return new $window.BrowserDtector($window.navigator.userAgent);
 };
 
-
 const $browserDetector = (appBrowser) => ({
   restrict: 'A',
   link: (_, elm, attr) => {
