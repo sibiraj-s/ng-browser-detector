@@ -13,60 +13,63 @@
 </head>
 
 <body ng-controller="BrowserDetectController" ng-cloak browser-detector>
-  <div class="contain">
-    <div class="col40">
-      <div id="github-badges">
-        <a href="https://github.com/sibiraj-s/ng-browser-detector/fork"
-          aria-label="Fork sibiraj-s/ng-browser-detector on GitHub" target="_blank">
-          <img src="https://img.shields.io/badge/Fork----.svg?style=social&label=Fork&logo=git" alt="Follow @sibiraj-s">
-        </a>
-        <a href="https://github.com/sibiraj-s" aria-label="Follow @sibiraj-s on GitHub" target="_blank">
-          <img src="https://img.shields.io/github/followers/sibiraj-s.svg?style=social&label=Follow @sibiraj-s"
-            alt="Fork">
-        </a>
+  <div class="container-fluid cover">
+    <div class="row">
+      <div class="col-5 demo">
+        <div id="github-badges">
+          <a href="https://github.com/sibiraj-s/ng-browser-detector/fork"
+            aria-label="Fork sibiraj-s/ng-browser-detector on GitHub" target="_blank">
+            <img src="https://img.shields.io/badge/Fork----.svg?style=social&label=Fork&logo=git"
+              alt="Follow @sibiraj-s">
+          </a>
+          <a href="https://github.com/sibiraj-s" aria-label="Follow @sibiraj-s on GitHub" target="_blank">
+            <img src="https://img.shields.io/github/followers/sibiraj-s.svg?style=social&label=Follow @sibiraj-s"
+              alt="Fork">
+          </a>
+        </div>
+        <br>
+        <h3>ng-browser-detector demo</h3>
+        <br>
+        <br>
+        <p> You are viewing this page in
+          <mark>{{appBrowser.getPlatformName()}} - {{appBrowser.getBrowserName()}}
+            (v-{{appBrowser.getBrowserShortVersion()}}) </mark>
+        </p>
       </div>
-      <br>
-      <h3>ng-browser-detector demo</h3>
-      <br>
-      <br>
-      <p> You are viewing this page in
-        <mark>{{appBrowser.getPlatformName()}} - {{appBrowser.getBrowserName()}}
-          (v-{{appBrowser.getBrowserShortVersion()}}) </mark>
-      </p>
-    </div>
-    <div class="col60">
-      <h2>ng-browser-detector</h2>
-      <h3>Installation</h3>
-      <p>Installation can be done via package managers such as npm or yarn</p>
-      <pre><code class="bash">
+      <div class="col-7 content">
+        <h2>ng-browser-detector</h2>
+        <h3>Installation</h3>
+        <p>Installation can be done via package managers such as npm or yarn</p>
+        <pre><code class="bash">
   npm install ng-browser-detector --save
   # or
   yarn add ng-browser-detector
   </code></pre>
-      <h3>Usage</h3>
-      <p> import the modules required for ng-browser-detector.</p>
-      <pre><code class="html">
+        <h3>Usage</h3>
+        <p> import the modules required for ng-browser-detector.</p>
+        <pre><code class="html">
   &lt;script src="angular/angular.min.js"&gt;&lt;/script&gt;
   &lt;script src="../ng-browser-detector.min.js"&gt;&lt;/script&gt;
       </code></pre>
-      <p>add the
-        <a href="https://github.com/sibiraj-s/ng-browser-detector" target="_blank">ngBrowser</a> dependency to the
-        module</p>
-      <pre><code class="javascript">
+        <p>add the
+          <a href="https://github.com/sibiraj-s/ng-browser-detector" target="_blank">ngBrowser</a> dependency to the
+          module</p>
+        <pre><code class="javascript">
   angular.module('myApp', ['ngBrowser'])
       </code></pre>
-      <p>in your controller</p>
-      <pre><code class="javascript">
+        <p>in your controller</p>
+        <pre><code class="javascript">
   app.controller('mainController', ['$scope', 'appBrowser', function($scope, appBrowser) {
      $scope.appBrowser = appBrowser;
   }]);
       </code></pre>
-      <p>a simple directive is included (usage : optional)</p>
-      <pre><code class="html">
+        <p>a simple directive is included (usage : optional)</p>
+        <pre><code class="html">
   &lt;body browser-detector&gt;&lt;/body&gt;
       </code></pre>
-      <p>the directive appends the browser details to element's class, if provided
-        <mark>browser-detector="attr"</mark> then the detauls are added as attributes</p>
+        <p>the directive appends the browser details to element's class, if provided
+          <mark>browser-detector="attr"</mark> then the detauls are added as attributes</p>
+      </div>
     </div>
   </div>
   <!-- dependencies -->
