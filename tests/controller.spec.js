@@ -14,8 +14,9 @@ describe('controller', () => {
   describe('$scope.appBrowser', () => {
     it('should initialize the controller properly', () => {
       expect(typeof $scope.appBrowser.parseUserAgent).toBe('function');
-      expect($scope.appBrowser.getBrowserName()).toBeTruthy();
-      expect($scope.appBrowser.getBrowserVersion()).toBeTruthy();
+      expect($scope.appBrowser.getBrowserInfo()).toBeTruthy();
+      expect(typeof $scope.appBrowser.getBrowserInfo()).toBe('object');
+      expect(typeof $scope.appBrowser.getBrowserInfo().name).toBe('string');
     });
   });
 });

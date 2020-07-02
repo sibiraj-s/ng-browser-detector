@@ -30,7 +30,7 @@
     "angularjs-device-detector"
   ],
   "peerDependencies": {
-    "browser-dtector": "^2.0.0"
+    "browser-dtector": "^3.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
@@ -38,7 +38,7 @@
     "@rollup/plugin-babel": "^5.0.3",
     "angular": "^1.8.0",
     "angular-mocks": "^1.8.0",
-    "browser-dtector": "^2.1.0",
+    "browser-dtector": "^3.0.1",
     "browser-sync": "^2.26.7",
     "chalk": "^4.1.0",
     "eslint": "^7.2.0",

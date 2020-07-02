@@ -32,8 +32,8 @@
         <br>
         <br>
         <p> You are viewing this page in
-          <mark>{{appBrowser.getPlatformName()}} - {{appBrowser.getBrowserName()}}
-            (v-{{appBrowser.getBrowserShortVersion()}}) </mark>
+          <mark>{{browserInfo.name}} - {{browserInfo.version}}
+            (v-{{browserInfo.platform}}) </mark>
         </p>
       </div>
       <div class="col-7 content">
@@ -73,7 +73,7 @@
     </div>
   </div>
   <!-- dependencies -->
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/browser-dtector@2/browser-dtector.umd.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/browser-dtector@3/browser-dtector.umd.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/angular@1.8.0/angular.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/ng-browser-detector@latest/ng-browser-detector.min.js">
   </script>

@@ -17,9 +17,11 @@ const $browserDetector = (appBrowser) => ({
       return '';
     }
 
-    const browserName = serialize(appBrowser.getBrowserName());
-    const browserVersion = serialize(appBrowser.getBrowserVersion());
-    const platformName = serialize(appBrowser.getPlatformName());
+    const browserInfo = appBrowser.getBrowserInfo();
+
+    const browserName = serialize(browserInfo.name);
+    const browserVersion = serialize(browserInfo.version);
+    const platformName = serialize(browserInfo.platform);
 
     if (attr.browserDetector === 'attr') {
       // append browser details as attribute
