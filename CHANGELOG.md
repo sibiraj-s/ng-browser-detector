@@ -14,6 +14,12 @@ All notable changes to this project will be documented in this file.
 > - Internal
 > - Unreleased
 
+## v4.0.0 (20202-12-05)
+
+#### Breaking Changes
+
+- update browser-dtector to v3 ([c6258e0](https://github.com/sibiraj-s/ng-browser-detector/commit/c6258e0))
+
 ## v3.0.0 (2019-12-05)
 
 #### Performance Improvements
