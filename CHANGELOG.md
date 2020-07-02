@@ -14,7 +14,7 @@ All notable changes to this project will be documented in this file.
 > - Internal
 > - Unreleased
 
-## v4.0.0 (20202-12-05)
+## v4.0.0 (2020-07-02)
 
 #### Breaking Changes
 
