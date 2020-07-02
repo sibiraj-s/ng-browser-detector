@@ -14,6 +14,12 @@ All notable changes to this project will be documented in this file.
 > - Internal
 > - Unreleased
 
+## v4.0.1 (2020-07-02)
+
+#### Documentation
+
+- fix release date in CHANGELOG ([eb65c8a](https://github.com/sibiraj-s/ng-browser-detector/commit/eb65c8a))
+
 ## v4.0.0 (2020-07-02)
 
 #### Breaking Changes

@@ -1,6 +1,6 @@
 {
   "name": "ng-browser-detector",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "AngularJs service to detect platform, browser and version",
   "author": "sibiraj-s",
   "license": "MIT",
