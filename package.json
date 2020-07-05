@@ -13,6 +13,7 @@
   },
   "scripts": {
     "build": "gulp build",
+    "lint": "eslint .",
     "serve": "gulp serve",
     "prepublishOnly": "node ./scripts/prepublish.js",
     "prerelease": "npm run build",
@@ -43,6 +44,7 @@
     "chalk": "^4.1.0",
     "eslint": "^7.4.0",
     "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-pegasus": "^1.0.0",
     "eslint-plugin-angular": "^4.0.1",
     "eslint-plugin-import": "^2.22.0",
     "gulp": "^4.0.2",
