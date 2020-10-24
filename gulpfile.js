@@ -95,7 +95,7 @@ const createServer = () => {
     },
     open: false,
     rewriteRules: [{
-      match: '//cdn.jsdelivr.net/npm/ng-browser-detector@latest/ng-browser-detector.min.js',
+      match: 'https://cdn.jsdelivr.net/npm/ng-browser-detector@latest/ng-browser-detector.min.js',
       replace: '/dist/ng-browser-detector.js',
     }],
   });
