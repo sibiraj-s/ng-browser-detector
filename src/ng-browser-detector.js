@@ -9,13 +9,13 @@ const $browser = ($window) => {
 const $browserDetector = (appBrowser) => ({
   restrict: 'A',
   link: (_, elm, attr) => {
-    function serialize(str) {
+    const serialize = (str) => {
       if (typeof str === 'string') {
         return str.toLowerCase().replace(/ /g, '-');
       }
 
       return '';
-    }
+    };
 
     const browserInfo = appBrowser.getBrowserInfo();
 

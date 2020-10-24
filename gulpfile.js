@@ -25,11 +25,11 @@ const banner = `/*!
  */
 `;
 
-async function cleanOutDir() {
+const cleanOutDir = async () => {
   await fs.promises.rmdir(outDir, { recursive: true });
-}
+};
 
-async function compile() {
+const compile = async () => {
   const bundle = await rollup.rollup({
     input: 'src/ng-browser-detector.js',
     plugins: [
@@ -45,9 +45,9 @@ async function compile() {
     sourcemap: true,
     banner,
   });
-}
+};
 
-async function updatePackageJSON() {
+const updatePackageJSON = async () => {
   const targetPkgJsonPath = path.resolve(outDir, 'package.json');
   const jsonStr = await fs.promises.readFile(targetPkgJsonPath, 'utf-8');
   const pkgJson = JSON.parse(jsonStr);
@@ -59,33 +59,33 @@ async function updatePackageJSON() {
   delete pkgJson.engines;
 
   await fs.promises.writeFile(targetPkgJsonPath, JSON.stringify(pkgJson, null, 2));
-}
+};
 
-function copyFiles() {
+const copyFiles = () => {
   return gulp.src([
     'README.md',
     'CHANGELOG.md',
     'LICENSE',
     'package.json',
   ]).pipe(gulp.dest(outDir));
-}
+};
 
-function minify() {
+const minify = () => {
   return gulp.src('dist/*.js')
     .pipe(sourcemap.init())
     .pipe(terser())
     .pipe(sourcemap.write('.'))
     .pipe(gulp.dest(outDir));
-}
+};
 
-function compileSass(server) {
+const compileSass = (server) => {
   return gulp.src('docs/*.scss')
     .pipe(sass())
     .pipe(gulp.dest('docs/'))
     .pipe(server.stream());
-}
+};
 
-function createServer() {
+const createServer = () => {
   return browserSync.init({
     server: {
       baseDir: './docs/',
@@ -99,9 +99,9 @@ function createServer() {
       replace: '/dist/ng-browser-detector.js',
     }],
   });
-}
+};
 
-async function serve() {
+const serve = () => {
   const server = createServer();
 
   gulp.watch('src/*.js', compile);
@@ -110,7 +110,7 @@ async function serve() {
   gulp.watch('docs/*.html').on('change', server.reload);
   gulp.watch('docs/*.js').on('change', server.reload);
   gulp.watch('dist/*.js').on('change', server.reload);
-}
+};
 
 const build = gulp.series(cleanOutDir, compile, minify, copyFiles, updatePackageJSON);
 
