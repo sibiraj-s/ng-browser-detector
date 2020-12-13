@@ -14,6 +14,12 @@ All notable changes to this project will be documented in this file.
 > - Internal
 > - Unreleased
 
+## v4.0.2 (2020-12-13)
+
+#### Internal
+
+- update LICENSE ([e4360b7](https://github.com/sibiraj-s/ng-browser-detector/commit/e4360b7))
+
 ## v4.0.1 (2020-07-02)
 
 #### Documentation
