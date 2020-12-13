@@ -9,18 +9,14 @@
   "bugs": "https://github.com/sibiraj-s/ng-browser-detector/issues",
   "homepage": "https://github.com/sibiraj-s/ng-browser-detector#readme",
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
   },
   "scripts": {
     "build": "gulp build",
     "lint": "eslint . --ignore-path .gitignore",
     "serve": "gulp serve",
-    "prepublishOnly": "node ./scripts/prepublish.js",
-    "prerelease": "npm run build",
-    "release": "sh ./scripts/release.sh",
     "test:watch": "karma start",
-    "test": "karma start --single-run",
-    "pretest": "npm run build"
+    "test": "karma start --single-run"
   },
   "keywords": [
     "angularjs-browser-detector",
