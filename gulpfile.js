@@ -25,7 +25,7 @@ const banner = `/*!
 `;
 
 const cleanOutDir = async () => {
-  await fs.rm(outDir, { recursive: true });
+  await fs.rm(outDir, { recursive: true, force: true });
 };
 
 const compile = async () => {
