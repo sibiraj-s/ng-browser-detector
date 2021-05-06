@@ -16,7 +16,8 @@
     "lint": "eslint . --ignore-path .gitignore",
     "serve": "gulp serve",
     "test:watch": "karma start",
-    "test": "karma start --single-run"
+    "test": "karma start --single-run",
+    "prepare": "is-ci || husky install"
   },
   "keywords": [
     "angularjs-browser-detector",
@@ -30,30 +31,30 @@
     "browser-dtector": "^3.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
-    "@rollup/plugin-babel": "^5.2.2",
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
+    "@rollup/plugin-babel": "^5.3.0",
     "angular": "^1.8.2",
     "angular-mocks": "^1.8.2",
     "browser-dtector": "^3.1.2",
     "browser-sync": "^2.26.14",
-    "chalk": "^4.1.0",
-    "eslint": "^7.18.0",
-    "eslint-config-pegasus": "^2.0.1",
+    "chalk": "^4.1.1",
+    "eslint": "^7.25.0",
+    "eslint-config-pegasus": "^2.0.2",
     "eslint-plugin-angular": "^4.0.1",
     "gulp": "^4.0.2",
     "gulp-plugin-terser": "^2.0.0",
-    "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
-    "husky": "^4.3.8",
-    "karma": "^6.0.3",
+    "husky": "^6.0.0",
+    "is-ci": "^3.0.0",
+    "karma": "^6.3.2",
     "karma-chrome-launcher": "^3.1.0",
     "karma-jasmine": "^4.0.1",
-    "lint-staged": "^10.5.3",
-    "rollup": "^2.38.1",
-    "sass": "^1.32.5",
-    "terser": "^5.5.1"
+    "lint-staged": "^10.5.4",
+    "rollup": "^2.47.0",
+    "sass": "^1.32.12",
+    "terser": "^5.7.0"
   }
 }

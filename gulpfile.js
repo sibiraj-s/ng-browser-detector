@@ -1,19 +1,18 @@
-const path = require('path');
-const fs = require('fs');
+const path = require('node:path');
+const fs = require('node:fs/promises');
+const util = require('node:util');
 
 const gulp = require('gulp');
 const rollup = require('rollup');
 const { babel } = require('@rollup/plugin-babel');
 const terser = require('gulp-plugin-terser');
 const sourcemap = require('gulp-sourcemaps');
-const sass = require('gulp-sass');
-const dartSass = require('sass');
+const sass = require('sass');
 const browserSync = require('browser-sync');
 
-const pkg = require('./package.json');
+const sassRenderAsync = util.promisify(sass.render);
 
-// set compiler for gulp sass
-sass.compiler = dartSass;
+const pkg = require('./package.json');
 
 const outDir = path.resolve(__dirname, 'dist');
 const banner = `/*!
@@ -26,7 +25,7 @@ const banner = `/*!
 `;
 
 const cleanOutDir = async () => {
-  await fs.promises.rmdir(outDir, { recursive: true });
+  await fs.rm(outDir, { recursive: true });
 };
 
 const compile = async () => {
@@ -49,7 +48,7 @@ const compile = async () => {
 
 const updatePackageJSON = async () => {
   const targetPkgJsonPath = path.resolve(outDir, 'package.json');
-  const jsonStr = await fs.promises.readFile(targetPkgJsonPath, 'utf-8');
+  const jsonStr = await fs.readFile(targetPkgJsonPath, 'utf-8');
   const pkgJson = JSON.parse(jsonStr);
 
   pkgJson.main = 'ng-browser-detector.min.js';
@@ -58,7 +57,7 @@ const updatePackageJSON = async () => {
   delete pkgJson.private;
   delete pkgJson.engines;
 
-  await fs.promises.writeFile(targetPkgJsonPath, JSON.stringify(pkgJson, null, 2));
+  await fs.writeFile(targetPkgJsonPath, JSON.stringify(pkgJson, null, 2));
 };
 
 const copyFiles = () => {
@@ -78,11 +77,12 @@ const minify = () => {
     .pipe(gulp.dest(outDir));
 };
 
-const compileSass = (server) => {
-  return gulp.src('docs/*.scss')
-    .pipe(sass())
-    .pipe(gulp.dest('docs/'))
-    .pipe(server.stream());
+const compileSass = async () => {
+  const result = await sassRenderAsync({
+    file: './docs/style.scss',
+  });
+
+  await fs.writeFile('./docs/style.css', result.css, 'utf-8');
 };
 
 const createServer = () => {
@@ -105,9 +105,10 @@ const serve = () => {
   const server = createServer();
 
   gulp.watch('src/*.js', compile);
-  gulp.watch('docs/*.scss', () => compileSass(server));
+  gulp.watch('docs/*.scss', compileSass);
 
   gulp.watch('docs/*.html').on('change', server.reload);
+  gulp.watch('docs/*.css').on('change', server.reload);
   gulp.watch('docs/*.js').on('change', server.reload);
   gulp.watch('dist/*.js').on('change', server.reload);
 };
