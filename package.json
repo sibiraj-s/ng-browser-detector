@@ -52,9 +52,9 @@
     "karma": "^6.3.4",
     "karma-chrome-launcher": "^3.1.0",
     "karma-jasmine": "^4.0.1",
-    "lint-staged": "^11.1.1",
-    "rollup": "^2.56.0",
-    "sass": "^1.37.5",
+    "lint-staged": "^11.1.2",
+    "rollup": "^2.56.2",
+    "sass": "^1.38.0",
     "terser": "^5.7.1"
   }
 }
