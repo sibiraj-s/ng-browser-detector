@@ -6,7 +6,6 @@ const gulp = require('gulp');
 const rollup = require('rollup');
 const { babel } = require('@rollup/plugin-babel');
 const terser = require('gulp-plugin-terser');
-const sourcemap = require('gulp-sourcemaps');
 const sass = require('sass');
 const browserSync = require('browser-sync');
 
@@ -70,11 +69,9 @@ const copyFiles = () => {
 };
 
 const minify = () => {
-  return gulp.src('dist/*.js')
-    .pipe(sourcemap.init())
+  return gulp.src('dist/*.js', { sourcemaps: true })
     .pipe(terser())
-    .pipe(sourcemap.write('.'))
-    .pipe(gulp.dest(outDir));
+    .pipe(gulp.dest(outDir, { sourcemaps: '.' }));
 };
 
 const compileSass = async () => {
