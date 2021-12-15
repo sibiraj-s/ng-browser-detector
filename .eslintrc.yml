@@ -1,17 +1,12 @@
 root: true
 
-extends: 
+extends:
   - pegasus
   - pegasus/node
 
 plugins:
   - angular
-  
-overrides:
-  - files: '!src/*'
-    rules:
-      no-console: off
-  
+
 globals:
   angular: true
 
