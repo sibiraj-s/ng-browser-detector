@@ -43,6 +43,8 @@ const compile = async () => {
     sourcemap: true,
     banner,
   });
+
+  await bundle.close();
 };
 
 const updatePackageJSON = async () => {
