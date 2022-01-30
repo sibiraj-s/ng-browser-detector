@@ -1,9 +1,9 @@
 const $browser = ($window) => {
-  if (!$window.BrowserDtector || typeof $window.BrowserDtector !== 'function') {
-    throw new Error('BrowserDtector not installed...');
+  if (!$window.BrowserDetector || typeof $window.BrowserDetector !== 'function') {
+    throw new Error('BrowserDetector not installed...');
   }
 
-  return new $window.BrowserDtector($window.navigator.userAgent);
+  return new $window.BrowserDetector($window.navigator.userAgent);
 };
 
 const $browserDetector = (appBrowser) => ({

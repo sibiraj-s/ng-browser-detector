@@ -28,12 +28,12 @@ describe('<browser-detector> directive', () => {
   });
 
   it('should throw if browser-dtector is not isntalled', () => {
-    const { BrowserDtector } = $window;
-    $window.BrowserDtector = undefined;
+    const { BrowserDetector } = $window;
+    $window.BrowserDetector = undefined;
     expect(() => {
       $compile('<div browser-detector></div>')($rootScope);
       $rootScope.$digest();
     }).toThrowError(Error);
-    $window.BrowserDtector = BrowserDtector;
+    $window.BrowserDetector = BrowserDetector;
   });
 });
