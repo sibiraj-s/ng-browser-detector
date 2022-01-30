@@ -14,6 +14,16 @@ All notable changes to this project will be documented in this file.
 > - Internal
 > - Unreleased
 
+## v4.0.3 (2022-01-30)
+
+#### Bug Fixes
+
+- fix compatibility with browser-dtector ([45eec70](https://github.com/sibiraj-s/ng-browser-detector/commit/45eec70))
+
+#### Internal
+
+- remove gulp-sourcemaps ([6720e20](https://github.com/sibiraj-s/ng-browser-detector/commit/6720e20))
+
 ## v4.0.2 (2020-12-13)
 
 #### Internal
