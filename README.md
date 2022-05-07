@@ -1,3 +1,5 @@
+> DEPRECATED: AngularJS support has officially ended as of January 2022
+
 # ng-browser-detector [![Tests](https://github.com/sibiraj-s/ng-browser-detector/workflows/Tests/badge.svg)](https://github.com/sibiraj-s/ng-browser-detector/actions)
 
 A simple angularJs service to detect platform, browser and version.
